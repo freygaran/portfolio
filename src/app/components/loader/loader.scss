@@ -58,8 +58,8 @@
   .splash[data-phase="morph"] &,
   .splash[data-phase="exit"] & {
     max-width: 2em; /* garder les lettres visibles dans ces phases */
-    color: var(--spring-green);
-    text-shadow: 0 0 32px rgba(2, 245, 161, 0.4);
+    color: var(--accent-green);
+    text-shadow: 0 0 32px rgba(var(--accent-rgb), 0.4);
     transition:
       color 0.12s ease calc(var(--idx, 0) * 0.07s),
       text-shadow 0.12s ease calc(var(--idx, 0) * 0.07s),
@@ -92,7 +92,7 @@
 
   .splash[data-phase="morph"] &,
   .splash[data-phase="exit"] & {
-    background-color: var(--spring-green);
+    background-color: var(--accent-green);
     color: var(--deep-onyx);
     border-radius: 14px;
     padding: 0.05em 0.15em;
@@ -106,7 +106,7 @@
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(3.2rem, 9vw, 5.5rem);
   font-weight: 300;
-  color: var(--spring-green);
+  color: var(--accent-green);
   opacity: 1;
   transition: opacity 0.15s ease;
   user-select: none;
@@ -149,8 +149,8 @@
   bottom: 0;
   left: 0;
   height: 2px;
-  background: var(--spring-green);
-  box-shadow: 0 0 12px rgba(2, 245, 161, 0.6);
+  background: var(--accent-green);
+  box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.6);
   animation: progressBar 5.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 

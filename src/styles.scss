@@ -1,37 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap');
+
 
 /* ── Design tokens — dark (défaut) ── */
 :root {
-  --spring-green: #02F5A1;
-  --deep-onyx: #07191E;
-  --surface: #0c2530;
-  --surface-2: #112e3a;
-  --text-primary: #f0f4f5;
-  --text-secondary: #8fa8b0;
-  --border: rgba(2, 245, 161, 0.12);
-  --glow: 0 0 24px rgba(2, 245, 161, 0.25);
-  --glow-lg: 0 0 48px rgba(2, 245, 161, 0.3);
+  /* ── Palette principale — Dark ── */
+  --accent-green: #0afcda;          /* Cyan (boutons, liens actifs, surbrillance) */
+  --accent-green-bright: #5cfde6;   /* Cyan plus clair pour le survol */
+  --accent-violet: #8b5cf6;         /* Violet (dégradés, bordures au survol, détails) */
+  --accent-violet-light: #c4b5fd;   /* Violet clair (texte des badges, lisible en petit) */
+  --on-accent: #0a0a0f;             /* Texte sur fond cyan (boutons) */
+
+  --deep-onyx: #0a0a0f;             /* Noir adouci (fond principal, hero) */
+  --surface: #14171c;               /* Cartes de projets, sous-sections */
+  --surface-2: #1b1f26;             /* Surface secondaire légèrement surélevée */
+
+  --text-primary: #e6e6e6;          /* Blanc cassé (texte principal) */
+  --text-secondary: #8b949e;        /* Gris (texte secondaire, sous-titres) */
+
+  /* ── Effets & Effets de verre ── */
+  --border: rgba(10, 252, 218, 0.18);
+  --border-hover: rgba(139, 92, 246, 0.6);
+  --glow: 0 0 24px rgba(10, 252, 218, 0.25);
+  --glow-lg: 0 0 48px rgba(139, 92, 246, 0.35);
+  --gradient-accent: linear-gradient(90deg, #0afcda, #8b5cf6);
   --radius: 24px;
   --radius-sm: 14px;
-  --glass-bg: rgba(12, 37, 48, 0.65);
+  --glass-bg: rgba(20, 23, 28, 0.7);
   --glass-blur: blur(18px);
-  --nav-bg: rgba(7, 25, 30, 0.85);
-  --nav-mobile-bg: rgba(7, 25, 30, 0.95);
+  --nav-bg: rgba(10, 10, 15, 0.85);
+  --nav-mobile-bg: rgba(10, 10, 15, 0.95);
 }
 
-/* ── Design tokens — light (Dark Azure #003152 + Soft Blue #ADDFF1) ── */
+/* ── Adaptation Mode Clair — Inversion contrastée ── */
 [data-theme="light"] {
-  --spring-green: #00967A;
-  --deep-onyx: #EDF7FB;
-  --surface: #FFFFFF;
-  --surface-2: rgba(173, 223, 241, 0.32);
-  --text-primary: #003152;
-  --text-secondary: #1E5070;
-  --border: rgba(0, 49, 82, 0.1);
-  --glow: 0 0 24px rgba(0, 150, 122, 0.18);
-  --glow-lg: 0 0 44px rgba(0, 150, 122, 0.25);
+  --accent-green: #087f6e;          /* Cyan assombri : #0afcda est illisible sur fond clair */
+  --accent-green-bright: #0a9b86;
+  --accent-violet: #7c3aed;
+  --accent-violet-light: #6d28d9;
+  --on-accent: #ffffff;
+
+  --deep-onyx: #f5f5f7;
+  --surface: #ffffff;
+  --surface-2: #eeeef2;
+
+  --text-primary: #0a0a0f;
+  --text-secondary: #4a4f57;
+
+  --border: rgba(10, 10, 15, 0.1);
+  --border-hover: rgba(124, 58, 237, 0.5);
+  --glow: 0 0 24px rgba(8, 127, 110, 0.2);
+  --glow-lg: 0 0 44px rgba(124, 58, 237, 0.25);
+  --gradient-accent: linear-gradient(90deg, #087f6e, #7c3aed);
   --glass-bg: rgba(255, 255, 255, 0.88);
-  --nav-bg: rgba(237, 247, 251, 0.94);
+  --nav-bg: rgba(245, 245, 247, 0.92);
   --nav-mobile-bg: rgba(255, 255, 255, 0.98);
 }
 
@@ -62,18 +84,108 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  line-height: 1.15;
-  color: var(--text-primary);
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;           /* ExtraBold — "Hi, I'm Jack" */
+  text-transform: none;
 }
 
+h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;           /* Bold — titres d'articles du blog */
+}
+
+/* ── Paragraphes ── */
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;           /* Light — textes de bio, descriptions */
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* ── Liens ── */
 a {
-  color: var(--spring-green);
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-  &:hover { opacity: 0.8; }
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  /* "Read more...", "See more!" sont souvent en mono dans ce thème : */
+  &.read-more,
+  &.see-more {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+/* ── Boutons ── */
+button,
+.btn,
+input[type="submit"] {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;   /* "SEND MESSAGE!", "CONTACT ME!" */
+  letter-spacing: 0.15em;
+}
+
+/* ── Formulaires ── */
+input,
+textarea,
+select {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+
+  &::placeholder {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+  }
+}
+
+/* ── Labels / dates / métadonnées ── */
+label,
+time,
+small,
+.tag,
+.section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;       /* "MARCH 1, 2021", "web design" */
+}
+
+/* ── Navigation ── */
+nav a,
+.menu-item {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* ── Citations / code ── */
+blockquote {
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+code, pre, kbd {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85em;
+}
+
+/* ── Textes verticaux décoratifs (bords) ── */
+.vertical-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  writing-mode: vertical-rl;    /* "scroll down", "cool stuff" */
 }
 
 img { max-width: 100%; display: block; }
@@ -153,7 +265,7 @@ section {
 }
 
 .btn-primary {
-  background: var(--spring-green);
+  background: transparent;
   color: var(--deep-onyx);
   box-shadow: 0 0 20px rgba(2, 245, 161, 0.3);
   &:hover {

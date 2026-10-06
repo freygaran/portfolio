@@ -11,14 +11,19 @@
 
       <!-- ── GAUCHE : texte ── -->
       <div class="hero-left">
-        <div class="hero-badge">
+        <!-- <div class="hero-badge">
           <span class="pulse-dot"></span>
           {{ text.badge }}
-        </div>
+        </div> -->
 
         <h1 class="hero-name">
-          <span class="line"      appLetterReveal [baseDelay]="300" [stagger]="42">AZIZET ONANGA</span>
-          <span class="line accent" appLetterReveal [baseDelay]="900" [stagger]="42">Freygis Arantes</span>
+          <span class="line" appLetterReveal [baseDelay]="300" [stagger]="42">Salut, </span>
+          <span class="line-flex">
+            <span appLetterReveal [baseDelay]="300" [stagger]="42">je suis </span>
+            <span class="highlight-name" appLetterReveal [baseDelay]="500" [stagger]="42">Arantes</span>
+          </span>
+
+          <span class="line accent" appLetterReveal [baseDelay]="900" [stagger]="42">DEVELOPPEUR FULLSTACK</span>
         </h1>
 
         <!-- Typewriter -->
@@ -31,10 +36,10 @@
         <p class="hero-tagline hero-tagline-reveal">{{ text.tagline }}</p>
 
         <div class="hero-cta">
-          <button class="btn btn-primary" (click)="scrollToSection('#projects')">
+          <!--<button class="btn btn-primary" (click)="scrollToSection('#projects')">
             {{ text.ctaProjects }}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
+          </button>-->
           <button class="btn btn-outline" (click)="scrollToSection('#contact')">
             {{ text.ctaContact }}
           </button>
@@ -67,7 +72,7 @@
 
             <div class="avatar">
               <div class="avatar-inner">
-                <img src="avatar.jpg" alt="Azizet Onanga Freygis Arantes" class="avatar-photo" loading="eager" />
+                <img src="avatar.jpeg" alt="Azizet Onanga Freygis Arantes" class="avatar-photo" loading="eager" />
               </div>
               <div class="avatar-glow"></div>
               <div class="avatar-border-ring"></div>
@@ -103,6 +108,10 @@
 
           </div><!-- /orbit-system -->
         </div><!-- /orbit-wrapper -->
+
+
+
+
       </div>
 
     </div>

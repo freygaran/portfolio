@@ -34,7 +34,7 @@ export class Experience implements AfterViewInit {
       role: 'Développeur Fullstack',
       company: 'United Bank for Africa (UBA)',
       location: 'Douala, Cameroun',
-      type: 'Stage',
+      type: 'Stage professionel',
       description:
         "Développement de 3 projets bancaires : API RESTful de compensation interbancaire, application de gestion des incidents clearing (Angular + Spring Boot + SQL Server) et solution Data Analysis & Business Intelligence (MySQL + PowerBI).",
       tags: ['Spring Boot', 'Angular', 'SQL Server', 'MySQL', 'PowerBI', 'REST API'],
@@ -78,7 +78,7 @@ export class Experience implements AfterViewInit {
       role: 'Développeur Mobile',
       company: 'Well Group',
       location: 'Douala, Cameroun',
-      type: 'Freelance',
+      type: 'Stage professionel',
       description:
         "Application mobile Android & iOS de mise en relation entre entrepreneurs et donateurs : transactions sécurisées, digitalisation et gestion des identités (IAM).",
       tags: ['Flutter', 'Dart', 'Firebase', 'Android', 'iOS'],

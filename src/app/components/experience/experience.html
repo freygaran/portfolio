@@ -25,7 +25,6 @@
                     <div class="ec-badges">
                       <span class="type-badge type-{{ item.type | lowercase }}">{{ item.type }}</span>
                       @if (item.current) {
-                        <span class="current-badge"><span class="live-dot"></span>En cours</span>
                       }
                     </div>
                     <h3 class="ec-role">{{ item.role }}</h3>
@@ -58,12 +57,7 @@
                 <div class="ec-top">
                   <div class="ec-avatar av-{{ item.type | lowercase }}">{{ item.company[0] }}</div>
                   <div class="ec-meta">
-                    <div class="ec-badges">
-                      <span class="type-badge type-{{ item.type | lowercase }}">{{ item.type }}</span>
-                      @if (item.current) {
-                        <span class="current-badge"><span class="live-dot"></span>En cours</span>
-                      }
-                    </div>
+
                     <h3 class="ec-role">{{ item.role }}</h3>
                     <p class="ec-company">{{ item.company }}</p>
                     <p class="ec-location">{{ item.period }} · {{ item.location }}</p>
@@ -94,9 +88,7 @@
             <div class="mob-meta">
               <span class="mob-period">{{ item.period }}</span>
               <span class="type-badge type-{{ item.type | lowercase }}">{{ item.type }}</span>
-              @if (item.current) {
-                <span class="current-badge"><span class="live-dot"></span>En cours</span>
-              }
+
             </div>
             <h3 class="mob-role">{{ item.role }}</h3>
             <p class="mob-company">{{ item.company }} · {{ item.location }}</p>

@@ -29,7 +29,7 @@
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    border-color: rgba(2, 245, 161, 0.25);
+    border-color: rgba(var(--accent-rgb), 0.25);
     box-shadow: var(--glow);
   }
 }
@@ -39,7 +39,7 @@
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--spring-green);
+  color: var(--accent-green);
   margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--border);
@@ -72,8 +72,8 @@
 .skill-tag {
   width: 36px;
   height: 28px;
-  background: rgba(2, 245, 161, 0.08);
-  border: 1px solid rgba(2, 245, 161, 0.18);
+  background: rgba(var(--accent-rgb), 0.08);
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -81,7 +81,7 @@
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
-  color: var(--spring-green);
+  color: var(--accent-green);
   flex-shrink: 0;
 }
 
@@ -95,7 +95,7 @@
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--spring-green);
+  color: var(--accent-green);
 }
 
 .skill-bar {
@@ -107,7 +107,7 @@
 
 .skill-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--spring-green), rgba(2, 245, 161, 0.5));
+  background: linear-gradient(90deg, var(--accent-green), rgba(var(--accent-rgb), 0.5));
   border-radius: 4px;
   transition: width 1.2s ease;
 }
